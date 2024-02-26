@@ -230,7 +230,6 @@
     margin: 1vmax auto;
     width: 80%;
     cursor: pointer;
-    z-index: 80;
     }
     .filterBox {
         width: 30vmax;
@@ -247,8 +246,34 @@
         left: inherit;
     }
     .filterOn{
-        opacity: 1;
+        opacity: .9;
         top: 40vw;
+    }
+    .filterBox .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        background: inherit;
+        border: 1px solid black;
+        border-radius: 50px;
+        width: 4vmax;
+        height: 4vmax;
+        cursor: pointer;
+        margin: 1.5vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .filterOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: .7;
+        z-index: 49;
     }
     .searchBox,.categoryLink,.clearFilter{
         font-size: 2vmax;

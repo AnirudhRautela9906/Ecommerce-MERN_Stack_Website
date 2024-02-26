@@ -7,6 +7,7 @@ import Loader from "../layout/Loader/Loader"
 import ProductCard from '../Home/ProductCard'
 import { getAllCategories } from '../../actions/categoriesAction'
 import { Typography, Slider } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Products = () => {
 
@@ -20,11 +21,13 @@ const Products = () => {
     const [price, setPrice] = useState([0, 100000]);
   const [toggle, setToggle] = React.useState(true);
   const filterSwitch = useRef() 
+  const coverBg = useRef() 
 
    
     const filterOn = (e) =>{
       setToggle(toggle => !toggle)
    filterSwitch.current.classList.toggle('filterOn')
+   coverBg.current.classList.toggle('filterOverlay')
      }
 
 
@@ -57,7 +60,12 @@ const Products = () => {
       <div id="filter">
         <button onClick={filterOn}>Filters</button>
       </div>
+
+      <div  onClick={filterOn}  ref={coverBg}></div>
+      
     <div className={` filterBox`} ref={filterSwitch}>
+    <button onClick={filterOn} className='close'> <CloseIcon/></button>
+
     <input className='searchBox' type="text" placeholder='Search a Product...' value={keyword} onChange={(e)=> setKeyword(e.target.value)}/>
         <Typography>Price</Typography>
         <Slider

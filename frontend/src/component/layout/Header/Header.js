@@ -112,7 +112,7 @@ coverbg.current.classList.remove('overlay')
             </li>}
 
         </ul>
-        <div ref={coverbg}></div>
+        <div ref={coverbg} onClick={toggleClose}></div>
 <SuccessAlert open={open} title={title} setOpen={setOpen}/>
 
     </div>
