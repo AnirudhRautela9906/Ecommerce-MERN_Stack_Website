@@ -3,9 +3,14 @@ const app = express()
 const cookieParser = require("cookie-parser")
 const fileUpload = require("express-fileupload")
 const bodyParser = require("body-parser")
-const errorMiddleware = require('./Middleware/error')
+const errorMiddleware = require('./middleware/error')
 const path = require("path")
 
+
+// Config 
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config({path:"config/config.env"})
+}
 
 app.use(express.json())
 app.use(cookieParser())
@@ -27,10 +32,7 @@ app.use('/api/v1',order)
 
 
 
-// Config 
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config({path:"Config/config.env"})
-}
+
 app.use(express.static(path.join(__dirname, "./frontend/build"))) 
 
 app.get("*", (req,res) => {
