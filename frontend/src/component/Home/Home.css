@@ -184,9 +184,10 @@
     /* height: 8%; */
     margin: 1vmax 0;
 }
-#filter{
+#filter,.filterBox .close{
     display: none;
 }
+
  @media screen and (max-width: 600px){
      .productCard >div> p {
          font-size: 1.7vmax;
