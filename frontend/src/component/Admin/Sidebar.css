@@ -1,0 +1,58 @@
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+  
+  .sidebar > a:first-child {
+    padding: 0;
+  }
+  .sidebar > a > img {
+    width: 100%;
+    transition: all 0.5s;
+  }
+  
+  .sidebar > a > img:hover {
+    filter: drop-shadow(0 0 10px tomato);
+  }
+  .sidebar a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.493);
+    font: 200 1rem "Roboto";
+    margin: 1rem 0;
+    transition: all 0.5s;
+  }
+  .sidebar a:first-child:hover {
+    transform: scale(1.1);
+  }
+  .css-1g86id8-MuiTreeItem-content{
+    width: auto !important;
+  }
+  .sidebar a:hover {
+    color: #FFD814;
+  }
+  
+  .sidebar a > P {
+    display: flex;
+    align-items: center;
+  }
+  .sidebar  svg {
+    margin: 1vmax;
+  }
+  
+  .sidebar .MuiTypography-root {
+    background-color: #fff !important;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .sidebar > a:first-child {
+      padding: 0;
+  }
+  .sidebar  svg {
+    margin: 2vmax;
+}
+.sidebar{
+  padding: 0;
+}
+  }

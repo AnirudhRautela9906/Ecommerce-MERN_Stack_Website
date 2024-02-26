@@ -1,0 +1,6 @@
+.contactContainer{
+    /* Sidebar Adjustment */
+    width: calc(100% - 50px);
+    position: relative;
+    left: 50px;
+}

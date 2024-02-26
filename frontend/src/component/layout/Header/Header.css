@@ -1,0 +1,94 @@
+.header{
+    width: 100%;
+    box-sizing: border-box;
+}
+.header ul{
+    justify-content: flex-start;
+    background-color:#131921;
+
+}
+.header ul.desktop{
+    padding: 1vmax;
+}
+.header li {
+    list-style: none;
+    padding:  0 2vmax ;
+}
+.header a {
+    text-decoration: none;
+    font: 800 2vmax   "Roboto" ;
+    color: white;
+    position: relative;
+}
+.desktop a p {
+        position: absolute;
+        background-color: red;
+        font-size: 1vmax;
+        top: -12px;
+        right: -20px;
+}
+/* mobile */
+.desktop{
+    display: flex;
+}
+.mobile{
+    display: none;
+}
+.header-sidebar{
+    /* display: block; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:50px;
+    z-index: 100;
+    transition: all .5s;
+
+}
+.header-sidebar svg{
+    color: white;
+    margin-right: 1vmax;
+}
+.header-sidebar li a{
+padding: 2vmax 0 ;
+display: flex;
+align-items: center;
+}
+/* .headerText{
+display: none;
+padding-right: 2vmax;
+transition: all .5s;
+} */
+.header-sidebar.header-toggle {
+    width: 250px;
+}
+.header-sidebar .headerText {
+    display: none;
+}
+.header-text{
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:600px){
+
+.mobile{
+    display: block;
+}
+.desktop{
+    display: none;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .7;
+    z-index: 99;
+}
+}

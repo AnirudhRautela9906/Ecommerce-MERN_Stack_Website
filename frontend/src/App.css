@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+.flexCenterColumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .flexCenterRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .greenColor {
+    color: green !important;
+  }
+  .redColor {
+    color: red !important;
+  }
+ .newProductContainer input:read-only{
+    background-color: #dedede;
+  }

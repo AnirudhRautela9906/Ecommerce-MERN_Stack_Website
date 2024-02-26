@@ -1,0 +1,220 @@
+.newCategoryContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(221, 221, 221);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .newCategoryContainer h1 {
+    color: rgba(0, 0, 0, 0.733);
+    font: 300 2rem "Roboto";
+    text-align: center;
+    margin: 1vmax 0;
+  }
+  
+  .createCategoryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 3vmax;
+    height: 50%;
+    width: 70vh;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+  .createCategoryForm > form{
+width: 100%;
+  }
+  
+  .createDiv {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 1vmax 0;
+  }
+  .createCategoryForm  .categoryList {
+    width: 100%;
+    align-items: center;
+    margin: 1vmax 0;
+    height: 30vh;
+    overflow-y: auto;
+  }
+  .createCategoryForm > form > div > input,
+  .createCategoryForm > form > div > select,
+  .createCategoryForm > form > div > textarea {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+    resize: none;
+  }
+  
+  .createCategoryForm > form > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  
+  #createCategoryForm > formFile > input {
+    display: flex;
+    padding: 0%;
+  }
+  
+  #createCategoryForm > formFile > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font: 400 0.8vmax cursive;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #createCategoryForm > formFile > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+  }
+  
+  #createCategoryForm > formImage,#updateCategoryFormImage {
+    width: 100%;
+    overflow: auto;
+  }
+  
+  #createCategoryForm > formImage > img ,#updateCategoryFormImage > img {
+    height: 8vmax;
+    margin: 1vmax;
+}
+  #createCategoryBtn {
+    border: none;
+    background-color: #FFD814;
+    color: black;
+    /* font: 300 0.9vmax "Roboto"; */
+    width: 40%;
+    margin-left: 1vmax;
+    padding: 0.8vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  }
+  
+  #createCategoryBtn:hover {
+    background-color: #febd69;
+  }
+  .category {
+    border: 1px solid #b9b9b9;
+    border-radius: 7px;
+    margin: .3vmax 0;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+}
+.category > p {
+  color: rgba(0, 0, 0, .555);
+  font: 400 1vmax cursive;
+  margin: .2vmax;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.category > div{
+  display: flex;
+}
+.category > div > button{
+      border: none;
+      border-radius: 100%;
+      height: 3vmax;
+      width: 3vmax;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      background-color: #efefef;
+      margin: 0.5vmax;
+      position: relative;
+      color: blue;
+}
+
+.category >div >button:last-child{
+  color: red;
+}
+.category >div> button:hover {
+  background-color: #e2e1e1;
+  
+}
+  @media screen and (max-width: 600px) {
+    .newCategoryContainer {
+      background-color: rgb(255, 255, 255);
+      
+    }
+    .createCategoryForm > form {
+      padding: 2vmax;
+    }
+  
+    .createCategoryForm > form > div > input,
+    .createCategoryForm > form > div > select,
+    .createCategoryForm > form > div > textarea {
+      padding: 2.5vmax 5vmax;
+      font: 300 1.7vmax cursive;
+    }
+  
+    .createCategoryForm > form > div > svg {
+      font-size: 2.8vmax;
+    }
+  
+    #createCategoryForm > formFile > img {
+      width: 8vmax;
+      border-radius: 100%;
+    }
+  
+    #createCategoryForm > formFile > input::file-selector-button {
+      height: 7vh;
+      font: 400 1.8vmax cursive;
+    }
+  
+    #createCategoryBtn {
+      font: 300 1.9vmax "Roboto";
+      padding: 1.8vmax;
+    }
+    .category{
+      display: flex;
+      flex-direction: column;
+      margin: 1.5vmax 0;
+  }
+  .category > p{
+      font: 400 3vmax cursive;
+      margin: 0.5vmax 0;
+  }
+  .category > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .category >div a{
+      height: 7vmax;
+      width: 7vmax;
+      margin: 1vmax;
+  }
+  .createCategoryForm{
+    width: auto;
+    margin: 5vmax 2vmax;
+    padding: 2vmax;
+  }
+  .category > div > button{
+    height: 7vmax;
+    width:  7vmax;
+  }
+  }
+  

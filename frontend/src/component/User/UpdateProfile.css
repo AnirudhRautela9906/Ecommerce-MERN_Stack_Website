@@ -1,0 +1,153 @@
+.updateProfileContainer{
+    width: 100vw;
+    max-width: 100%;
+    
+}
+.updateProfileBox{
+    background-color: white;
+    width: 40vw;
+    height: 70vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid rgb(0 0 0 / 19%);
+    padding: 1vmax;
+    margin: 3vmax;
+    border-radius: 10px;
+}
+.updateProfileHeading{
+    text-align: center;
+    color: rgba(0, 0, 0, .623);
+    font: 400 1.3vmax "Roboto";
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, .268);
+    width: 50%;
+    margin: auto;
+}
+
+.updateProfileForm {
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all .5s;
+
+}
+
+
+
+.updateProfileForm > div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.updateProfileForm > div > :where(input,select){
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .268);
+    border-radius: 4px;
+    font: 300 .9vmax cursive;
+    outline: none;
+}
+
+.updateProfileForm > div > svg{
+position: absolute;
+transform: translateX(1vmax);
+font-size: 1.6vmax;
+color: rgba(0, 0, 0, .623);
+}
+
+.updateProfileBtn{
+    border: none;
+    background-color: #FFD814;
+    color: black;
+    font: 300 .9vmax "Roboto";
+    width: 100%;
+    padding: .8vmax;
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .268);
+}
+
+.updateProfileBtn:hover{
+    background-color: #febd69;
+}
+
+#updateProfileImage > img {
+    width: 6vmax;
+    height: 5vmax;
+border-radius: 100%;
+border: 2px solid #cacaca;
+object-fit: cover;
+object-position: top;
+}
+#updateProfileImage > input {
+    display: flex;
+    padding: 0;
+    margin-left: 10px;
+}
+#updateProfileImage > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0;
+    font: 400 .8vmax cursive;
+    transition: all .5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, .623);
+    background-color: rgb(255, 255, 255);
+}
+#updateProfileImage > input::file-selector-button:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+@media screen and (max-width:600px){
+    
+    .updateProfileContainer{
+        background-color: white;
+         /* Sidebar Adjustment */
+         width: calc(100% - 50px);
+         position: relative;
+         left: 50px;
+    }
+.updateProfileBox{
+width: 100vw;
+height: 95vh;
+}
+.updateProfileHeading{
+    font-size: 2.3vmax;
+}
+.updateProfileForm{
+    padding: 2vmax;
+}
+
+.updateProfileForm > div > input{
+    padding: 2.5vmax 5vmax;
+    font: 300 2.7vmax cursive;
+}
+
+.updateProfileForm > div > svg{
+font-size: 2.8vmax;
+}
+
+
+
+#updateProfileImage > input::file-selector-button {
+    height: 7vh;
+    font: 400 1.8vmax cursive;
+}
+
+.updateProfileBtn{
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+}
+.updateProfileForm > div > :where(input,select) {
+    font: 300 2.7vmax cursive;
+}
+}

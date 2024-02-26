@@ -1,0 +1,87 @@
+.productListContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+  }
+  .MuiDataGrid-columnHeader {
+    background-color: tomato;
+    padding: 1vmax!important;
+}
+  
+  #productListHeading {
+    font: 400 2rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 0.5s;
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .productListTable {
+    background-color: white;
+    border: none !important;
+  }
+  
+  .productListTable div {
+    font: 300 1vmax "Roboto";
+    color: rgba(0, 0, 0, 0.678);
+    border: none !important;
+  }
+  .css-yrdy0g-MuiDataGrid-columnHeaderRow > div{
+    background-color: #FFD814 !important;
+  }
+  .productListTable .MuiDataGrid-main a,
+  .productListTable .MuiDataGrid-main button {
+    color: rgba(0, 0, 0, 0.527);
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 0.5vmax;
+  }
+
+  
+  .productListTable a:hover {
+    color: rgb(37, 132, 214);
+  }
+  
+  .productListTable button:hover {
+    color: rgb(236, 30, 30);
+  }
+  
+ 
+.referredUsersListContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+}
+  
+  @media screen and (max-width: 600px) {
+.referredUsersListContainer {
+   /* Sidebar Adjustment */
+     width: calc(100% - 50px);
+     position: relative;
+     left: 50px;
+}
+    .productListTable div {
+      font: 300 4vw "Roboto";
+    }
+    #productListHeading {
+      margin: 2rem 0;
+      /* width: 100vw; */
+  }
+  }
+  

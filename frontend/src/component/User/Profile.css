@@ -1,0 +1,254 @@
+.profileContainer{
+    display: flex;
+    width: 100vw;
+   
+    max-width: 100%;
+    background-color: white;
+}
+.profileContainer > div{
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profileContainer > div:first-child > h1{
+    font: 500 2.2vmax "Roboto";
+    margin: 2vmax;
+}
+
+.profileContainer > div:first-child > img {
+    width: 20vmax;
+    height: 20vmax;
+    object-fit: cover;
+    border-radius: 100%;
+    transition: all .5s;
+    object-position: top;
+}
+
+.profileContainer > div:first-child > img:hover{
+    transform: scale(1.05);
+}
+.profileContainer > div:first-child > a{
+    border: none;
+    background-color: #FFD814;
+    font: 400 1vmax "Roboto";
+    color: black;
+    text-decoration: none;
+    padding: .5vmax;
+    width: 30%;
+    margin: 1vmax;
+    text-align: center;
+    transition: all .5s;
+}
+
+.profileContainer > div:first-child > a:hover{
+    background-color: #febd69;
+}
+
+.profileContainer > div:last-child {
+    align-items: flex-start;
+    padding: 3vmax;
+    box-sizing: border-box;
+}
+.profileContainer > div:last-child > div{
+    margin: .5vmax 0;
+    width: 100%;
+}
+.profileContainer > div:last-child > div > h4 {
+    color: black;
+    font: 400 1vmax "Roboto";
+}
+.profileContainer > div:last-child > div > p {
+    color: rgba(0, 0, 0, .555);
+    font: 400 1vmax cursive;
+    margin: .2vmax;
+    word-break: break-word;
+}
+.address{
+    border: 1px solid #b9b9b9;
+    border-radius: 7px;
+    margin: .3vmax 0;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+
+}
+ .address > p {
+    color: rgba(0, 0, 0, .555);
+    font: 400 1vmax cursive;
+    margin: .2vmax;
+    word-break: break-word;
+}
+.address > div{
+    display: flex;
+}
+.address > div > a {
+        border: none;
+        border-radius: 100%;
+        height: 3vmax;
+        width: 3vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: #efefef;
+        margin: 0.5vmax;
+        position: relative;
+        color: blue;
+}
+.address :where(button,a):hover {
+    background-color: #e2e1e1;
+    
+}
+.address >div >button{
+    border: none;
+    border-radius: 100%;
+    height: 3vmax;
+    width: 3vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #efefef;
+    margin: .5vmax;
+    position: relative;
+    color: red;
+}
+.share {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.copied {
+        position: absolute;
+        top: 23%;
+        left: -59px;
+        color: blue;
+        background-color: #b9dfff;
+        padding: 0.3vmax;
+        border-radius: 35%;
+}
+.share   button {
+    border: none;
+    border-radius: 100%;
+    height: 3vmax;
+    width: 3vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #efefef;
+    margin: .5vmax;
+    position: relative;
+}
+.share button:hover {
+    background-color: #e2e1e1;
+    
+}
+.profileContainer  > div  :where(button,a)  > svg{
+padding: .5vmax;
+font-size: 2vmax;
+}
+
+.profileContainer > div:last-child > div:last-child {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.profileContainer > div:last-child > div:last-child > a {
+    border: none;
+    background-color: rgb(68, 68, 68);
+    font: 400 1vmax "Roboto";
+    color: white;
+    text-decoration: none;
+    padding: .5vmax;
+    text-align: center;
+    transition: all .5s;
+    margin: 1vmax 0;
+}
+
+.profileContainer > div:last-child > div:last-child > a:hover{
+    background-color: rgb(31, 31, 31);
+}
+
+@media screen and (max-width: 600px) {
+    .profileContainer{
+        flex-direction: column;
+         /* Sidebar Adjustment */
+         width: calc(100% - 50px);
+         position: relative;
+         left: 50px;
+    }    
+    .profileContainer > div {
+        margin-top: 5vmax;
+    }
+    .profileContainer > div:first-child > h1{
+        font: 500 3.2vmax "Roboto";
+        transform: translateY(-2vmax);
+    }
+    .profileContainer > div:first-child > a{
+        font: 400 1.7vmax "Roboto";
+        padding: 1vmax;
+    }
+    .profileContainer > div:last-child {
+        text-align: center;
+        align-items: center;
+        margin-bottom: 10vmax;
+    }
+    .profileContainer > div:last-child > div > p{
+        font: 400 3vmax cursive;
+        margin: .5vmax 0;
+        flex-direction: column;
+
+    }
+
+    .profileContainer > div:last-child > div:last-child > a {
+    font: 400 2.3vmax "Roboto";
+    padding: 1vmax;
+    margin: 2vmax 0;
+    
+}
+.profileContainer > div:last-child > div > h4 {
+    color: black;
+    font: 400 2.3vmax "Roboto";
+}
+.profileContainer  > div > div button {
+    height: 7vmax;
+    width: 7vmax;
+    margin: 1vmax;
+}
+.profileContainer  > div > div > div {
+    justify-content: center;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5vmax 0;
+}
+.address > p{
+    font: 400 3vmax cursive;
+    margin: 0.5vmax 0;
+}
+.address > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.address >div a{
+    height: 7vmax;
+    width: 7vmax;
+    margin: 1vmax;
+}
+.profileContainer  > div  :where(button,a)  > svg {
+    padding: .5vmax;
+    font-size: 3vmax;
+}
+.copied {
+    top: 30%;
+    left: -16px;
+    padding: .5vmax;
+}
+}
+

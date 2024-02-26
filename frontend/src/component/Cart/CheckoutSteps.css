@@ -1,0 +1,18 @@
+.MuiStepConnector-line{
+    display: none !important;
+}
+.MuiStepConnector-root{
+    height: 1px;
+    background-color: black
+}
+.Mui-completed > .MuiStepConnector-root{
+    background-color: #FFD814;
+}
+.MuiStepper-root{
+    margin:3vmax 2vmax ;
+}
+@media screen and (max-width:600px) {
+    /* .MuiStepper-root{
+        margin-top:11vmax;
+    } */
+}
