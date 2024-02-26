@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect,useState } from 'react'
+import React, { Fragment, useEffect,useState,useRef } from 'react'
 import "../Home/Home.css"
 import MetaData from '../layout/MetaData'
 import {getProduct} from "../../actions/productAction"
@@ -18,7 +18,17 @@ const Products = () => {
     const [category, setCategory] = useState("All Products");
     const [rating, setRating] = useState(0);
     const [price, setPrice] = useState([0, 100000]);
+  const [toggle, setToggle] = React.useState(true);
+  const filterSwitch = useRef() 
+
    
+    const filterOn = (e) =>{
+      setToggle(toggle => !toggle)
+   filterSwitch.current.classList.toggle('filterOn')
+     }
+
+
+
     const priceHandler = (event, newPrice) => {
         setPrice(newPrice);
       };
@@ -44,7 +54,10 @@ const Products = () => {
     
     <h2 className="homeHeading" id="featuredProducts">{keyword  ?  `You searched for ${keyword}` : category}</h2>
     <div className='homeContainer'>
-    <div className="filterBox ">
+      <div id="filter">
+        <button onClick={filterOn}>Filters</button>
+      </div>
+    <div className={` filterBox`} ref={filterSwitch}>
     <input className='searchBox' type="text" placeholder='Search a Product...' value={keyword} onChange={(e)=> setKeyword(e.target.value)}/>
         <Typography>Price</Typography>
         <Slider

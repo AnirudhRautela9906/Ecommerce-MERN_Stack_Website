@@ -121,12 +121,9 @@
      box-shadow: 0 0 5px rgba(15,15,15,.26);
      transform: translateY(-1vmax);
  }
- .filterBox{
-    width: 15vmax;
-    /* position: absolute; */
-    top: 10vmax;
-    left: 4vmax;
-    margin: 3vmax;
+.filterBox {
+    width: 17vmax;
+    margin: -3vmax 3vmax;
     z-index: 9;
 }
 .filterBox > fieldset {
@@ -187,6 +184,9 @@
     /* height: 8%; */
     margin: 1vmax 0;
 }
+#filter{
+    display: none;
+}
  @media screen and (max-width: 600px){
      .productCard >div> p {
          font-size: 1.7vmax;
@@ -219,9 +219,36 @@
           left: 50px;
           flex-direction: column;
      }
-     .filterBox {
+    
+    #filter{
+        display: flex;
+    }
+    #filter button{
+        padding: 1vmax;
+    background: gold;
+    font-size: 2vmax;
+    margin: 1vmax auto;
+    width: 80%;
+    cursor: pointer;
+    z-index: 80;
+    }
+    .filterBox {
         width: 30vmax;
-        margin: 3vmax auto;
+        margin: auto;
+        position: fixed;
+        top: 350vw;
+        right: 0vmax;
+        height: auto;
+        z-index: 50;
+        transition: all .5s;
+        background-color: #faf3c6;
+        padding: 3vmax;
+        opacity: 0;
+        left: inherit;
+    }
+    .filterOn{
+        opacity: 1;
+        top: 40vw;
     }
     .searchBox,.categoryLink,.clearFilter{
         font-size: 2vmax;
