@@ -11,7 +11,7 @@ exports.paymentFrontend = catchAsyncErrors(async (req, res, next) => {
   if (process.env.NODE_ENV !== "production") {
     res.status(200).json({ url: `${process.env.FRONTEND_URL}` });
   } else {
-    res.status(200).json({ url: `${req.protocol}://${req.get("host")}` });
+    res.status(200).json({ url: `https://${req.get("host")}` });
   }
 });
 
@@ -96,7 +96,7 @@ exports.paymentVerification = catchAsyncErrors(async (req, res, next) => {
     if (process.env.NODE_ENV !== "production") {
       res.redirect(`${process.env.FRONTEND_URL}/success`);
     } else {
-      res.redirect(`${req.protocol}://${req.get("host")}/success`);
+      res.redirect(`https://${req.get("host")}/success`);
     }
   } else {
     res.status(400).json({
